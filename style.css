@@ -1,0 +1,159 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header{
+    color: red;
+    text-shadow: 10px 10px 20px black;    
+}
+
+.text{
+    font-size: 36px;
+    color: blue;
+}
+
+.greeting{
+    font-size: 30px;
+    font-style: italic;
+}
+
+.play__putton{
+    margin-bottom: 100px;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(223, 209, 23);
+    border-radius: 20px;
+    font-size: 25px;
+    outline: none;
+}
+
+.quiz{    
+    width: 80%;
+    height: 300px;
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz__left{
+    height: 100%;
+    width: 30%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    font-size: 25px;
+    text-align: center;
+    color: red;   
+    font-weight: 700; 
+}
+
+.quiz__right{
+    height: 100%;
+    width: 30%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 25px;
+    text-align: center;
+    color: red;
+    font-weight: 700;
+}
+
+.quiz__action{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz__input{
+    height: 25px;
+    text-align: center;
+}
+
+.quiz__button{
+    height: 30px;
+    background-color: rgb(223, 209, 23)
+
+}
+
+.modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+
+.modal__greet{
+    /* display: none; */
+}
+
+.modal__congratulation{
+    display: none;
+}
+
+.modal__window{
+    width: 600px;
+    height: 400px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__title{
+    font-size: 35px;
+    color: #fff;
+}
+
+.modal__input-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal__input{
+    width: 250px;
+    height: 35px;
+    font-size: 25px;
+    color: rgb(172, 16, 172);
+    text-align:center;
+}
+
+.modal__button{
+    margin-left: 5px;
+    height: 40px;
+    background-color: #fff;
+}
+
+.congratulation{
+    text-align: center;
+    width: 80%;
+    font-size: 100px;
+    color: #fff;
+}
+
+
+
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: flex;
+}

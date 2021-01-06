@@ -41,7 +41,7 @@ quizForm.addEventListener('submit', (event) => {
         rightMessage.textContent = `Многовато, попробуй меньше`
     }else{
         congratulationText.textContent = `Молодец!!! Ты угадал(а)
-         с ${counter}-го раза!!! Загаданное число было ${number}.`
+         с ${counter}-го раза!!! Загаданное число  было ${number}.`
         congratulationModal.classList.add('visible');
     }
     quizForm.reset();

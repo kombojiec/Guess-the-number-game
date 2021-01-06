@@ -33,7 +33,6 @@
 .quiz{    
     width: 80%;
     height: 300px;
-    /* border: 1px solid #000; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,7 +41,6 @@
 .quiz__left{
     height: 100%;
     width: 30%;
-    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: top;
@@ -55,7 +53,6 @@
 .quiz__right{
     height: 100%;
     width: 30%;
-    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: flex-end;

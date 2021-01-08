@@ -18,7 +18,7 @@ let counter;
 
 modalForm.addEventListener('submit', (event)=>{
     event.preventDefault();
-    greeting.textContent = `Привет, ${inputName.value}, отгадай число от 0 до 100`;
+    greeting.textContent = `Привет, ${inputName.value}. Отгадай число от 0 до 100`;
     modal.classList.add('hidden');
 })
 

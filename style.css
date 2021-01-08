@@ -18,6 +18,7 @@
 .greeting{
     font-size: 30px;
     font-style: italic;
+    text-align: center;
 }
 
 .play__putton{
@@ -69,9 +70,19 @@
     justify-content: center;
 }
 
+.quiz__input-wrap{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .quiz__input{
+    margin-bottom: 5px;
     height: 25px;
     text-align: center;
+    border: 5px groove rgb(223, 209, 23)
 }
 
 .quiz__button{
@@ -153,4 +164,21 @@
 
 .visible{
     display: flex;
+}
+
+
+@media screen and (max-width: 374px){
+    .modal__window{
+        border: none;
+        color: red;
+    }
+    .greeting{
+        max-width: 230px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .play__putton{
+        margin: 0;
+    }
 }

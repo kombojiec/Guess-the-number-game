@@ -70,6 +70,13 @@
     justify-content: center;
 }
 
+.small{
+    margin: 15px;
+}
+
+.big{
+    margin: 5px;
+}
 .quiz__input-wrap{
     margin-top: 20px;
     display: flex;
@@ -102,10 +109,6 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.8);
     overflow: hidden;
-}
-
-.modal__greet{
-    /* display: none; */
 }
 
 .modal__congratulation{
@@ -155,9 +158,6 @@
     color: #fff;
 }
 
-
-
-
 .hidden{
     display: none;
 }
@@ -180,5 +180,25 @@
 @media screen and (max-width: 500px){
     .play__putton{
         margin: 0;
+    }
+
+    .congratulation{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .small{
+        font-size: 20px;
+    }
+
+    .big{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 970px){
+    .congratulation{
+        font-size: 50px;
     }
 }

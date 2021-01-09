@@ -26,8 +26,8 @@ playButton.addEventListener('click', ()=>{
     number = Math.ceil(Math.random() * 101);
     counter = 0;
     quiz.classList.add('visible');
+    console.log(number);
 })
-
 
 quizForm.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -35,11 +35,16 @@ quizForm.addEventListener('submit', (event) => {
     rightMessage.textContent = ''; 
     let result = inputNumber.value;
     ++counter;
-    if(result < number){
+    if(isNaN(+result)  || result < 0 || result > 100){
+        rightMessage.textContent = `Некорректное значение. 
+        Введи число от 0 до 100`;
+        --counter;
+    }else if(result < number){
         leftMessage.textContent = `Маловато, попробуй больше`
     }else if(result > number){
         rightMessage.textContent = `Многовато, попробуй меньше`
-    }else{
+    }else if(result == number){
+        console.log('попал');
         congratulationText.textContent = `Молодец!!! Ты угадал(а)
          с ${counter}-го раза!!! Загаданное число  было ${number}.`
         congratulationModal.classList.add('visible');
@@ -48,10 +53,6 @@ quizForm.addEventListener('submit', (event) => {
 })
 
 congratulationModal.addEventListener('click', event => {
-    if(event.target == event.currentTarget){
         congratulationModal.classList.remove('visible');
         quiz.classList.remove('visible');
-    }
 })
-
-

@@ -14,6 +14,7 @@ const congratulationText = document.querySelector('.congratulation');
 const quizForm = document.querySelector('.quiz__input-wrap');
 const playButton = document.querySelector('.play__putton');
 const error = document.querySelector('.error');
+const body = document.querySelector('.body');
 let number;
 let counter;
 
@@ -27,6 +28,7 @@ playButton.addEventListener('click', ()=>{
     number = Math.ceil(Math.random() * 101);
     counter = 0;
     quiz.classList.add('visible');
+    inputNumber.focus();
     // console.log(number);
 })
 
@@ -46,10 +48,10 @@ quizForm.addEventListener('submit', (event) => {
     }else if(result > number){
         rightMessage.textContent = `Многовато, попробуй меньше`
     }else if(result == number){
-        console.log('попал');
         congratulationText.textContent = `Молодец!!! Ты угадал(а)
          с ${counter}-го раза!!! Загаданное число  было ${number}.`
-        congratulationModal.classList.add('visible');
+         inputNumber.blur();
+        congratulationModal.classList.add('visible');        
     }
     quizForm.reset();
 })

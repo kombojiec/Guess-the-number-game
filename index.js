@@ -13,6 +13,7 @@ const congratulationModal = document.querySelector('.modal__congratulation');
 const congratulationText = document.querySelector('.congratulation');
 const quizForm = document.querySelector('.quiz__input-wrap');
 const playButton = document.querySelector('.play__putton');
+const error = document.querySelector('.error');
 let number;
 let counter;
 
@@ -26,17 +27,18 @@ playButton.addEventListener('click', ()=>{
     number = Math.ceil(Math.random() * 101);
     counter = 0;
     quiz.classList.add('visible');
-    console.log(number);
+    // console.log(number);
 })
 
 quizForm.addEventListener('submit', (event) => {
     event.preventDefault();
+    error.textContent = '';
     leftMessage.textContent = '';
     rightMessage.textContent = ''; 
     let result = inputNumber.value;
     ++counter;
     if(isNaN(+result)  || result < 0 || result > 100){
-        rightMessage.textContent = `Некорректное значение. 
+        error.textContent = `Некорректное значение. 
         Введи число от 0 до 100`;
         --counter;
     }else if(result < number){

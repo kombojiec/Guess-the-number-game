@@ -39,7 +39,7 @@ quizForm.addEventListener('submit', (event) => {
     rightMessage.textContent = ''; 
     let result = inputNumber.value;
     ++counter;
-    if(isNaN(+result)  || result < 0 || result > 100){
+    if(isNaN(+result)  || result < 0 || result > 100 || result === ""){
         error.textContent = `Некорректное значение. 
         Введи число от 0 до 100`;
         --counter;
